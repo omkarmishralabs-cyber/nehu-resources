@@ -9,48 +9,30 @@
     --border-color: rgba(255, 255, 255, 0.1);
 }
 
-/* --- NEW: Keyframe Animations --- */
+/* --- Keyframe Animations --- */
 @keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
-
 @keyframes backgroundPan {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
 }
 
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
     font-family: 'Poppins', sans-serif;
     line-height: 1.6;
     background-color: var(--bg-color);
     color: var(--text-color);
-    /* NEW: Animated background gradient */
     background-image: linear-gradient(120deg, #121212, #1a1a2e, #121212);
     background-size: 200% 200%;
     animation: backgroundPan 15s ease infinite;
 }
 
-/* ... (rest of the CSS is mostly the same) ... */
-.container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
+.container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
 a { text-decoration: none; color: #4facfe; }
 header { background-color: rgba(18, 18, 18, 0.8); backdrop-filter: blur(10px); border-bottom: 1px solid var(--border-color); padding: 1rem 0; position: sticky; top: 0; z-index: 10; }
 header nav { display: flex; justify-content: space-between; align-items: center; }
@@ -64,79 +46,117 @@ main { padding: 2rem 0; }
 .hero p { color: var(--subtle-text-color); font-size: 1.1rem; }
 .departments h2 { text-align: center; margin-bottom: 2rem; font-size: 2rem; }
 .card-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
-
-/* --- UPDATED "Glass" Card Style --- */
-.card {
-    background: var(--surface-color);
-    backdrop-filter: blur(15px);
-    padding: 2rem;
-    border-radius: 15px;
-    border: 1px solid var(--border-color);
-    color: var(--text-color);
-    position: relative; /* Needed for the arrow */
-    overflow: hidden; /* Keeps things tidy */
-    transition: transform 0.3s ease, border-color 0.3s ease;
-
-    /* NEW: Applying the entry animation */
-    animation: fadeInUp 0.5s ease-out forwards;
-    opacity: 0; /* Start hidden before animation */
-}
-
-/* NEW: Staggered animation delay for each card */
+.card { background: var(--surface-color); backdrop-filter: blur(15px); padding: 2rem; border-radius: 15px; border: 1px solid var(--border-color); color: var(--text-color); position: relative; overflow: hidden; transition: transform 0.3s ease, border-color 0.3s ease; animation: fadeInUp 0.5s ease-out forwards; opacity: 0; }
 .card:nth-child(1) { animation-delay: 0.1s; }
 .card:nth-child(2) { animation-delay: 0.2s; }
 .card:nth-child(3) { animation-delay: 0.3s; }
 .card:nth-child(4) { animation-delay: 0.4s; }
+.card:nth-child(5) { animation-delay: 0.5s; }
+.card:nth-child(6) { animation-delay: 0.6s; }
+.card:nth-child(7) { animation-delay: 0.7s; }
+.card:nth-child(8) { animation-delay: 0.8s; }
+.card:hover { transform: translateY(-10px) scale(1.02); border-color: rgba(0, 242, 254, 0.5); }
+.card .fas { font-size: 2.5rem; margin-bottom: 1rem; background: var(--primary-gradient); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+.card h3 { margin-bottom: 0.5rem; color: var(--text-color); }
+.card p { color: var(--subtle-text-color); }
+.arrow { position: absolute; bottom: 2rem; right: 2rem; font-size: 1.5rem; color: var(--text-color); opacity: 0; transform: translateX(-10px); transition: opacity 0.3s ease, transform 0.3s ease; }
+.card:hover .arrow { opacity: 1; transform: translateX(0); }
 
-
-.card:hover {
-    transform: translateY(-10px) scale(1.02);
-    border-color: rgba(0, 242, 254, 0.5);
+/* --- UPDATED: Resource List Styles (Semester Page) --- */
+.resource-section {
+    margin-bottom: 3rem;
 }
-
-/* NEW: Styling the icons */
-.card .fas {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    background: var(--primary-gradient);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+.resource-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 0.5rem;
 }
-
-.card h3 {
-    margin-bottom: 0.5rem;
-    color: var(--text-color); /* Removed gradient to keep focus on icon */
+.resource-section h2 .fas {
+    margin-right: 1rem;
+    color: #4facfe;
 }
-
-.card p {
-    color: var(--subtle-text-color);
+.resource-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
-
-/* NEW: Styling the arrow for hover effect */
-.arrow {
-    position: absolute;
-    bottom: 2rem;
-    right: 2rem;
+.resource-item {
+    background: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    transition: background-color 0.3s ease;
+}
+.resource-item:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+.resource-item .fas {
     font-size: 1.5rem;
+}
+.icon-pdf { color: #ff5b5b; }
+.icon-ppt { color: #ff9a4d; }
+.icon-word { color: #4d94ff; }
+.icon-zip { color: #fee140; }
+.resource-name {
+    flex-grow: 1;
     color: var(--text-color);
-    opacity: 0;
-    transform: translateX(-10px);
-    transition: opacity 0.3s ease, transform 0.3s ease;
 }
-
-.card:hover .arrow {
-    opacity: 1;
-    transform: translateX(0);
+/* NEW: Button Group Container */
+.button-group {
+    display: flex;
+    gap: 0.75rem;
 }
-
+/* NEW: General Button Styles */
+.btn {
+    padding: 0.5rem 1.25rem;
+    border-radius: 5px;
+    font-weight: 600;
+    white-space: nowrap;
+    transition: transform 0.2s ease, background-color 0.3s ease, color 0.3s ease;
+    border: 2px solid transparent;
+}
+.btn:hover {
+    transform: scale(1.05);
+}
+/* NEW: Download Button Style */
+.btn-download {
+    background: var(--primary-gradient);
+    color: var(--bg-color);
+}
+/* NEW: View Button Style */
+.btn-view {
+    background: transparent;
+    border-color: #4facfe;
+    color: #4facfe;
+}
+.btn-view:hover {
+    background-color: #4facfe;
+    color: var(--bg-color);
+}
 
 /* --- Footer --- */
 footer { text-align: center; padding: 2rem 0; background-color: transparent; color: var(--subtle-text-color); margin-top: 2rem; border-top: 1px solid var(--border-color); }
 
-/* --- Responsive Design for Mobile --- */
+/* --- Responsive Design --- */
 @media (max-width: 768px) {
     .card-grid { grid-template-columns: 1fr; }
     .hero h1 { font-size: 2.2rem; }
     header nav { flex-direction: column; gap: 1rem; }
+    
+    .resource-item { 
+        flex-direction: column; 
+        align-items: flex-start; 
+        gap: 1rem; 
+    }
+    .button-group {
+        width: 100%;
+    }
+    .btn {
+        text-align: center;
+        flex-grow: 1; /* Makes both buttons take up equal space */
+    }
 }
