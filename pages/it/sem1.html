@@ -29,50 +29,64 @@
     <main>
         <section class="hero container">
             <h1>IT - Semester 1</h1>
-            <p>All available resources for your first semester.</p>
+            <p>Select a subject below to see its resources.</p>
         </section>
 
         <section class="container">
-            <div class="resource-section">
-                <h2><i class="fas fa-book"></i> Books</h2>
-                <div class="resource-list">
-                    <div class="resource-item">
-                        <i class="fas fa-file-pdf icon-pdf"></i>
-                        <span class="resource-name">Engineering Mathematics - I</span>
-                        <div class="button-group">
-                            <a href="#" target="_blank" class="btn btn-view">View Online</a>
-                            <a href="#" class="btn btn-download" download>Download</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <div class="subject-accordion">
 
-            <div class="resource-section">
-                <h2><i class="fas fa-file-alt"></i> Notes</h2>
-                <div class="resource-list">
-                    <div class="resource-item">
-                        <i class="fas fa-file-powerpoint icon-ppt"></i>
-                        <span class="resource-name">C Programming - Unit 1 Notes</span>
-                        <div class="button-group">
-                             <a href="#" target="_blank" class="btn btn-view">View Online</a>
-                            <a href="#" class="btn btn-download" download>Download</a>
+                <div class="accordion-item">
+                    <div class="accordion-header">Basics of Electrical Engineering (BEE)</div>
+                    <div class="accordion-content">
+                        <div class="resource-section">
+                            <h4><i class="fas fa-book"></i> Books</h4>
+                            <div class="resource-list">
+                                <div class="resource-item">
+                                    <i class="fas fa-file-pdf icon-pdf"></i>
+                                    <span class="resource-name">Principles of Electrical Engineering by V.K. Mehta</span>
+                                    <div class="button-group"><a href="#" target="_blank" class="btn btn-view">View</a><a href="#" class="btn btn-download" download>Download</a></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="resource-section">
-                <h2><i class="fas fa-question-circle"></i> Previous Year Questions</h2>
-                <div class="resource-list">
-                    <div class="resource-item">
-                        <i class="fas fa-file-archive icon-zip"></i>
-                        <span class="resource-name">End Term Question Papers (2022-2024)</span>
-                        <div class="button-group">
-                            <a href="#" target="_blank" class="btn btn-view">View Online</a>
-                            <a href="#" class="btn btn-download" download>Download</a>
+                <div class="accordion-item">
+                    <div class="accordion-header">Computer Systems Fundamentals (CSF)</div>
+                    <div class="accordion-content">
+                        <div class="resource-section">
+                            <h4><i class="fas fa-folder"></i> Notes (Unit-wise)</h4>
+                             <div class="resource-list">
+                                <div class="resource-item">
+                                    <i class="fas fa-file-archive icon-zip"></i>
+                                    <span class="resource-name">All Unit Notes (Combined)</span>
+                                    <div class="button-group"><a href="#" target="_blank" class="btn btn-view">View</a><a href="#" class="btn btn-download" download>Download</a></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-header">Engineering Mathematics (EM)</div>
+                    <div class="accordion-content"></div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-header">Indian Constitution (IC)</div>
+                    <div class="accordion-content"></div>
+                </div>
+                
+                <div class="accordion-item">
+                    <div class="accordion-header">Problem Solving using Python (PYTHON)</div>
+                    <div class="accordion-content"></div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-header">Universal Human Values (UHV)</div>
+                    <div class="accordion-content"></div>
+                </div>
+
             </div>
         </section>
     </main>
@@ -81,5 +95,6 @@
         <p>&copy; 2025 NEHU Resources. A student-led initiative.</p>
     </footer>
 
+    <script src="../../js/main.js"></script>
 </body>
 </html>

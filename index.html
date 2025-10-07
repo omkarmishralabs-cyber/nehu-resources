@@ -11,12 +11,27 @@
     <meta property="og:title" content="NEHU B.Tech Resources Hub">
     <meta property="og:description" content="Find all your study materials for IT, ECE, BME, and ENE in one place.">
     <meta property="og:url" content="https://omkarmishralabs-cyber.github.io/nehu-resources/">
-    
+
     <link rel="stylesheet" href="./css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "NEHU B.Tech Resources",
+      "url": "https://omkarmishralabs-cyber.github.io/nehu-resources/",
+      "description": "A free collection of study materials, including notes, books, and previous year questions for B.Tech students of North-Eastern Hill University (NEHU), Shillong.",
+      "provider": {
+        "@type": "Organization",
+        "name": "NEHU Resources (Student Initiative)",
+        "url": "https://omkarmishralabs-cyber.github.io/nehu-resources/"
+      }
+    }
+    </script>
 </head>
 <body>
 
@@ -25,8 +40,8 @@
             <a href="./index.html" class="logo">NEHU Resources</a>
             <ul>
                 <li><a href="./index.html">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contribute</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./contribute.html">Contribute</a></li>
             </ul>
         </nav>
     </header>
@@ -36,7 +51,6 @@
             <h1>Your Central Hub for College Resources</h1>
             <p>Find notes, books, and previous year questions for your department.</p>
         </section>
-
         <section class="departments container">
             <h2>Select Your Department</h2>
             <div class="card-grid">
@@ -46,7 +60,7 @@
                     <p>Access all resources for the IT department.</p>
                     <span class="arrow">&rarr;</span>
                 </a>
-                <a href="#" class="card">
+                <a href="./pages/ece/ece.html" class="card">
                     <i class="fas fa-satellite-dish"></i>
                     <h3>Electronics & Comm. (ECE)</h3>
                     <p>Access all resources for the ECE department.</p>
@@ -67,10 +81,8 @@
             </div>
         </section>
     </main>
-
     <footer>
         <p>&copy; 2025 NEHU Resources. A student-led initiative.</p>
     </footer>
-
 </body>
 </html>
